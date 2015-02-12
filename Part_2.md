@@ -1,5 +1,6 @@
-##Title: 
-Beer Me 
+# Project Part 2: Project Tracker and Requirements
+
+##Title: Beer Me 
 
 ###Vision Statement: 
 Those 21 years of age and over will have access to a straightforward application that gives an instant and personal recommendation for what type of beer would best fit his/her given situation, based on his/her input.
@@ -28,7 +29,7 @@ Req. ID |	Requirements Description	                                             
 FUNC-01 |	As an admin, I want an error message to pop up in the case of incorrect credentials to prompt the user that login was not successful |	high
 FUNC-02	| As a new user, I want to be able to register to the system so that I can start using the app | high
 FUNC-03	| As a forgetful user, I want to be able to recover my password so that I don’t have to create a whole new account | medium
-FUNC-04 |	As an admin, I want to define clear input parameters for users to follow so that the system can return good recommendations based off these parameters |	High
+FUNC-04 |	As an admin, I want to define clear input parameters for users to follow so that the system can return good recommendations based off these parameters |	high
 
 
 ####Non-Functional Requirements:
