@@ -65,5 +65,5 @@ https://github.com/mdbray/BeerMe
 
 
 
-Project Plan: (with Agile story sizing)
- 
+###Project Plan: (with Agile story sizing)
+insert screenshot here...
