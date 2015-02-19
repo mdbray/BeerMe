@@ -16,15 +16,7 @@ Those 21 years of age and over will have access to a straightforward application
 MySQL
 
 ###E‐R Diagram: 
-entity‐relationship diagram of your database.  You must use a tool to create this, you cannot draw by hand on paper or whiteboard.
-This must show:  
-- Entities (tables in your database) 
-    - General Beer Category, Beer Subcategory, Food, Color, User Info, Dislikes
-- Primary keys 
-- Foreign keys 
-- Relationships between entities using one of the two styles presented 
- 
-![Click here for ER Diagram](https://www.dropbox.com/s/u6d9xjcqsj66zgk/BeerMe_ERdiagram.png?dl=0)
+Link to ER Diagram: https://www.dropbox.com/s/u6d9xjcqsj66zgk/BeerMe_ERdiagram.png?dl=0
 
 ###VCS Link:
 https://github.com/mdbray/BeerMe
