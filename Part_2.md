@@ -58,4 +58,4 @@ https://rally1.rallydev.com/#/29746926224d/dashboard
 https://github.com/mdbray/BeerMe
 
 ###Project Plan: (with Agile story sizing)
-![Link to Project Plan](https://www.dropbox.com/s/pf2aew19spfrais/BeerMe_Sub2.jpg.png?dl=0)
+Link to project plan: https://www.dropbox.com/s/pf2aew19spfrais/BeerMe_Sub2.jpg.png?dl=0
