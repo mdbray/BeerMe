@@ -3,7 +3,7 @@
 ##Title: Beer Me 
 
 ###Vision Statement: 
-Those 21 years of age and over will have access to a straightforward application that gives an instant and personal recommendation for what type of beer would best fit his/her given situation, based on his/her input.
+Those 21 years of age and over will have access to a straightforward application that gives an instant and personal recommendation for what type of beers would best fit his/her given situation, based on his/her input.
 
 ###Who: 
 - Michelle Bray
@@ -57,14 +57,5 @@ https://rally1.rallydev.com/#/29746926224d/dashboard
 ###VCS Link: 
 https://github.com/mdbray/BeerMe
 
-
-
-
-
-
-
-
-
-
 ###Project Plan: (with Agile story sizing)
-insert screenshot here...
+![Link to Project Plan](https://www.dropbox.com/s/pf2aew19spfrais/BeerMe_Sub2.jpg.png?dl=0)
