@@ -24,7 +24,7 @@ This must show:
 - Foreign keys 
 - Relationships between entities using one of the two styles presented 
  
-![Click here for ER Diagram](https://docs.google.com/a/colorado.edu/file/d/0B5GQ_epSmBs6QXNJcm81SWV4Z2c/edit)
+![Click here for ER Diagram](https://www.dropbox.com/lightbox/home/CSCI3308)
 
 ###VCS Link:
 https://github.com/mdbray/BeerMe
