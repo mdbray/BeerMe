@@ -24,7 +24,7 @@ This must show:
 - Foreign keys 
 - Relationships between entities using one of the two styles presented 
  
-![Click here for ER Diagram](https://www.dropbox.com/lightbox/home/CSCI3308)
+![Click here for ER Diagram](https://www.dropbox.com/s/u6d9xjcqsj66zgk/BeerMe_ERdiagram.png?dl=0)
 
 ###VCS Link:
 https://github.com/mdbray/BeerMe
