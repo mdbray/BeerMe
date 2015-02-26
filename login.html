@@ -1,17 +1,31 @@
 <!doctype html>
 <html lang = "en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-	<meta charset = "UTF-8">
-	<title>BeerMe</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset = "UTF-8">
+        <title>BeerMe</title>
+        
 </head>
 <body>
-	<H1>BeerMe</H1>
-	<p>This is a paragraph.</p>
-	<section>
-		<form action = " ">
-			Email: <input type="email" name="email" required>
-		</form>
-	</section>
+        <h1>BeerMe</h1>
+        <h2>Join our beer community today!</h2>
+        <p>This is a paragraph...</p>
+
+        <section id="loginBox">
+        <h3>Login</h3>
+        <form method="post" class="minimal">
+                <label for="username">
+                        Username:
+                        <input type="text" name="username" id="username" placeholder="Username must be between 8 and 20 characters" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+                </label>
+                <label for="password">
+                        Password:
+                        <input type="password" name="password" id="password" placeholder="Password must contain 1 uppercase, lowercase and number" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+                </label>
+                <button type="submit" class="btn-minimal">Sign in</button>
+        </form>
+</section>
+
 </body>
 </html>
+
