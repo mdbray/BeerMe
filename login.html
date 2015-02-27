@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang = "en">
 <head>
-        <link rel="stylesheet" href="styles.css">
-        <meta charset = "UTF-8">
-        <title>BeerMe</title>
-        
+	<link rel="stylesheet" href="styles.css">
+	<meta charset = "UTF-8">
+	<title>BeerMe</title>
+	
 </head>
 <body>
 	
@@ -21,25 +21,65 @@
 		</tr>
 	</table>
 	
-        <h1>BeerMe</h1>
-        <h2>Join our beer community today!</h2>
-        <p>This is a paragraph...</p>
+	<h1>BeerMe</h1>
+	<h2 align="center">Join our beer community today!</h2>
+	<p align="center">Sign in or create an account for personalized beer recommendations. </p>
 
-        <section id="loginBox">
-        <h3>Login</h3>
+	<section id="loginBox">
+	<h3>Login:</h3>
+	<form method="post" class="minimal">
+		<label for="username">
+			Username:
+			<input type="text" name="username" id="username" placeholder="Username must be between 8 and 20 characters" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+		</label>
+		
+		<br><br>
+		<label for="password">
+			Password:
+			<input type="password" name="password" id="password" placeholder="Password must contain 1 uppercase, lowercase and number" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+		</label>
+		
+		<br><br>
+		<button type="submit" class="btn-minimal">Sign in</button>
+	</form>
+	</section>
+	
+	<br>
+	<br>
+	<br>
+        <section id="signupBox">
+        <h3>Sign up:</h3>
         <form method="post" class="minimal">
-                <label for="username">
+                <label for="email">
+                        E-mail:
+                        <input type="text" name="email" id="email" placeholder="youremail@xyz.com" pattern="[a-zA-Z0-9_-.]+@[a-zA-Z0-9_-.]+\." required="required" />
+                </label>
+		
+		<br><br>
+		<label for="username">
                         Username:
                         <input type="text" name="username" id="username" placeholder="Username must be between 8 and 20 characters" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
                 </label>
-                <label for="password">
+                
+		<br><br>
+		<label for="password">
                         Password:
                         <input type="password" name="password" id="password" placeholder="Password must contain 1 uppercase, lowercase and number" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
                 </label>
-                <button type="submit" class="btn-minimal">Sign in</button>
+
+		<br><br>
+                <label for="password">
+                        Confirm Password:
+                        <input type="password" name="password" id="password" placeholder="Password must contain 1 uppercase, lowercase and number" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+                </label>
+
+		<br><br>
+                <button type="submit" class="btn-minimal">Create Account!</button>
         </form>
-</section>
+	</section>
+
 
 </body>
 </html>
+
 
