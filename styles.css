@@ -52,3 +52,21 @@ p {
         line-height: 22px;
 }
 
+table { 
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+button {
+	background-color: rgb(230,168,0);
+	color: black;
+	border: 1px solid black;
+	font-weight: bold;
+	font-size: 105%;
+	text-transform: capitalize;
+}
+
+button:hover {
+	cursor: pointer;
+	border: 1px solid black;
+}
