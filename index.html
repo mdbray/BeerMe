@@ -4,8 +4,23 @@
 	<link rel="stylesheet" href="styles.css">
 	<meta charset = "UTF-8">
 	<title>BeerMe</title>
+	<SCRIPT TYPE="text/javascript">
+		<!--
+		function popup(mylink, windowname) {
+		if (! window.focus)return true;
+		var href;
+		if (typeof(mylink) == 'string')
+			href=mylink;
+		else
+			href=mylink.href;
+		window.open(href, 'Verify Age', 'width=400,height=300,left=400,top=300,scrollbars=no');
+		return false;
+		}
+		//-->
+	</SCRIPT>
 </head>
 <body>
+	<BODY onLoad="popup('ageverify.html', 'ad')">
 	<table align ="center" border="0" width="800">
 		<tr valign="top">
 			<td height="200" colspan="5" align="center"><a href="index.html"><img src="images/foam.jpg" alt="banner" width="780" height="200" border="0" /></td>
@@ -13,13 +28,13 @@
 		<tr valign="center">
 			<td width="188" align="center"><div class ="nav"><a href="index.html">Home</a></div></td>
 			<td width="188" align="center"><div class ="nav"><a href="login.html">Login</a></div></td>
-			<td width="188" align="center"><div class ="nav"><a href="beerinfo.html">Beer info</a></div></td>
-			<td width="188" align="center"><div class ="nav"><a href="resources.html">Other resources</a></div></td>
+			<td width="188" align="center"><div class ="nav"><a href="beerinfo.html">Beer Info</a></div></td>
+			<td width="188" align="center"><div class ="nav"><a href="resources.html">Other Resources</a></div></td>
 			<td width="188" align="center"><div class ="nav"><a href="about.html">About Us</a></div></td>
 		</tr>
 	</table>
 	
-	<table align="center" border="0" width="780" cellpadding="5"
+	<table align="center" border="0" width="780" cellpadding="5">
 	<tr valign ="top">
 	<td>
 	<br>
