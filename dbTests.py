@@ -6,16 +6,16 @@ import unittest
 import MySQLdb
 
 # connect to database
-database = MySQLdb.connect("localhost","root","","jakesdb" )
+database = MySQLdb.connect("localhost","root","","BeerMeDB" )
 
 # prepare cursor object for executing queries
 cursor = database.cursor()
 
 """
-# data base query 
+# data base query example 
 cursor.execute("SELECT * FROM Food")
 
-# print all the first cell of all the rows
+# example of how to print all the first cell of all the rows
 for row in cursor.fetchall() :
     print row[0],row[1]
 """
@@ -30,7 +30,23 @@ class TestSQLdb(unittest.TestCase):
 		cursor.execute("SELECT Name FROM BeerCat WHERE BeerCat.Id=2")
 		name = cursor.fetchone()[0]
 		self.assertEqual(name,"American Lager")
-
+	
+	def test_getColorUsingColorID(self):
+		cursor.execute("SELECT Name FROM Color WHERE Color.Id=1") 
+		name = cursor.fetchone()[0]
+		self.assertEqual(name,"Dark")
+		cursor.execute("SELECT Name FROM Color WHERE Color.Id=2")
+                name = cursor.fetchone()[0]
+                self.assertEqual(name,"Brown")
+		cursor.execute("SELECT Name FROM Color WHERE Color.Id=3")
+                name = cursor.fetchone()[0]
+                self.assertEqual(name,"Amber")
+		cursor.execute("SELECT Name FROM Color WHERE Color.Id=4")
+                name = cursor.fetchone()[0]
+                self.assertEqual(name,"Pale")
+		cursor.execute("SELECT Name FROM Color WHERE Color.Id=5")
+                name = cursor.fetchone()[0]
+                self.assertEqual(name,"Light")
 
 if __name__ == '__main__':
 	unittest.main()
