@@ -1,11 +1,13 @@
 #Jacob C. Levine
 #CSCI 3308, Spring 2015
-
+#Automated Tests for Part 6 of BeerMe project
 
 import unittest
 import MySQLdb
 
 # connect to database
+# ******* Important Note **********
+#  you may need to change "root" and "" to your MySQL username and password respectively 
 database = MySQLdb.connect("localhost","root","","BeerMeDB" )
 
 # prepare cursor object for executing queries
