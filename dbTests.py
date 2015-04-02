@@ -6,9 +6,13 @@ import unittest
 import MySQLdb
 
 # connect to database
+<<<<<<< HEAD
+database = MySQLdb.connect("localhost","user","","BeerMeDB" )
+=======
 # ******* Important Note **********
 #  you may need to change "root" and "" to your MySQL username and password respectively 
 database = MySQLdb.connect("localhost","root","","BeerMeDB" )
+>>>>>>> cb1e024880febe7c07495c0f78eeeff8b414d838
 
 # prepare cursor object for executing queries
 cursor = database.cursor()
