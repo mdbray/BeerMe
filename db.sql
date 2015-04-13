@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `Beers` (
 `BeerCatId` int(1) NOT NULL,
 `SourceId` int(1) NOT NULL,
 `abv` varchar(30) NOT NULL,
-`description` varchar(500) NOT NULL,
+`description` varchar(600) NOT NULL,
 PRIMARY KEY(`Id`)
 ) ENGINE = MyISAM DEFAULT CHARSET = utf8 auto_increment = 4;
 INSERT INTO `Beers` (`Id`,`Name`,`BeerCatId`,`SourceId`,`abv`,`description`) VALUES
@@ -71,10 +71,10 @@ CREATE TABLE IF NOT EXISTS `FoodPairing`(
 PRIMARY KEY (`Id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=5;
 INSERT INTO `FoodPairing`(`Id`,`Name`,`BeerId`,`FoodId`,`ColorId`,`SourceId`,`Review`) VALUES
-	(1,'Sierra Nevada',1,2,4,2,'A very crisp and refreshing beer, this easy-to-drink pale ale is an excellent compliment to a delicious burger.  The heavier, meaty flavor of the burger pairs extraordinarily well with light, fresh taste of the beer.  You’ll have a hard time finding a better brew than this to wash down your bites of juicy burger!'),
-	(2,'Upslope',1,2,4,2,'this beer is full of flavor and matches up nicely with your favorite burger.  This pale ale has a hoppy bite to it which complements the rich, earthy taste of the burger quite well.  If you like pale ales, you’ll love this combination! '),
+	(1,'Sierra Nevada',1,2,4,2,'A very crisp and refreshing beer, this easy-to-drink pale ale is an excellent compliment to a delicious burger.  The heavier, meaty flavor of the burger pairs extraordinarily well with light, fresh taste of the beer.  You will have a hard time finding a better brew than this to wash down your bites of juicy burger!'),
+	(2,'Upslope',1,2,4,2,'This beer is full of flavor and matches up nicely with your favorite burger.  This pale ale has a hoppy bite to it which complements the rich, earthy taste of the burger quite well.  If you like pale ales, you’ll love this combination! '),
 	(3,'Victory',2,5,4,2,'Slightly sweet and very refreshing beer that’s smooth and is perfect for a nice salad. The vegetables in the salad paired with this refreshing (yet tasteful) beer quenches any thirst. The flavors of the lettuce and other veggies meshes perfectly with the slightly sweet and fruity notes. '),
-	(4,'Coors Light',3,3,5,2,'while I am not usually one to reach for a ‘light’ beer, it does a fantastic job washing down the greasy, doughy pizza. Very light hop profile and slight maltiness makes this beer seem like (and go down like) water.');
+	(4,'Coors Light',3,3,5,2,'While I am not usually one to reach for a ‘light’ beer, it does a fantastic job washing down the greasy, doughy pizza. Very light hop profile and slight maltiness makes this beer seem like (and go down like) water.');
 
 CREATE TABLE IF NOT EXISTS `Users`(
 `Id` int(1) NOT NULL auto_increment,

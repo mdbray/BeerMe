@@ -6,13 +6,13 @@ import unittest
 import MySQLdb
 
 # connect to database
-<<<<<<< HEAD
-database = MySQLdb.connect("localhost","user","","BeerMeDB" )
-=======
+#<<<<<<< HEAD
+#database = MySQLdb.connect("localhost","user","","BeerMeDB" )
+#=======
 # ******* Important Note **********
 #  you may need to change "root" and "" to your MySQL username and password respectively 
-database = MySQLdb.connect("localhost","root","","BeerMeDB" )
->>>>>>> cb1e024880febe7c07495c0f78eeeff8b414d838
+database = MySQLdb.connect("localhost","root","sdw@Plur911","BeerMeDB" )
+#>>>>>>> cb1e024880febe7c07495c0f78eeeff8b414d838
 
 # prepare cursor object for executing queries
 cursor = database.cursor()
@@ -28,7 +28,7 @@ for row in cursor.fetchall() :
 
 class TestSQLdb(unittest.TestCase):
 
-	def test_getNameUsingBeerID(self): 
+	def Test_GetNameUsingBeerID(self): 
 		
 		cursor.execute("SELECT Name FROM BeerCat WHERE BeerCat.Id=1") # query database for beer with ID 1
 		name = cursor.fetchone()[0] # get name associated with beer ID 1
@@ -39,7 +39,7 @@ class TestSQLdb(unittest.TestCase):
 		name = cursor.fetchone()[0]
 		self.assertEqual(name,"American Lager")
 	
-	def test_getColorUsingColorID(self):
+	def Test_GetColorUsingColorID(self):
 		
 		cursor.execute("SELECT Name FROM Color WHERE Color.Id=1") # query database for color with ID 1
 		name = cursor.fetchone()[0] # get name associated with color ID 1
@@ -62,7 +62,7 @@ class TestSQLdb(unittest.TestCase):
                 name = cursor.fetchone()[0]
                 self.assertEqual(name,"Light")
 
-	def test_getFoodUsingFoodID(self):
+	def Test_GetFoodUsingFoodID(self):
 
 		cursor.execute("SELECT Name FROM Food WHERE Food.Id=1")
                 name = cursor.fetchone()[0]
@@ -100,7 +100,7 @@ class TestSQLdb(unittest.TestCase):
                 name = cursor.fetchone()[0]
                 self.assertEqual(name,"Weiners")
 
-	def test_getBeerNameUsingFoodId(self):
+	def Test_GetBeerNameUsingFoodId(self):
 
 		cursor.execute("SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId=2")
                 names = cursor.fetchall()
@@ -116,11 +116,11 @@ class TestSQLdb(unittest.TestCase):
                 names = cursor.fetchall()
                 self.assertEqual(names[0][0],"Coors Light")
 
-	def test_getReviewUsingFoodIdAndBeer(self):
+	def Test_GetReviewUsingFoodIdAndBeer(self):
 		
 		cursor.execute("SELECT Review FROM FoodPairing WHERE FoodId=2 AND Name='Sierra Nevada'")
                 review = cursor.fetchone()[0]
-                self.assertEqual(review,"A very crisp and refreshing beer, this easy-to-drink pale ale is an excellent compliment to a delicious burger.  The heavier, meaty flavor of the burger pairs extraordinarily well with light, fresh taste of the beer.  You'll have a hard time finding a better brew than this to wash down your bites of")
+                self.assertEqual(review,"A very crisp and refreshing beer, this easy-to-drink pale ale is an excellent compliment to a delicious burger.  The heavier, meaty flavor of the burger pairs extraordinarily well with light, fresh taste of the beer.  You will have a hard time finding a better brew than this to wash down your bites of juicy burger!")
 
 if __name__ == '__main__':
 	unittest.main()
