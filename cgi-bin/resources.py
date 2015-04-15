@@ -62,7 +62,7 @@ homePage = '''
 			<br>
 			<br>- See the lists of various local establishments
 			<br>
-			<br>- In cities like New York and San Francisco many establishments keep their beer menu's up-to-date here
+			<br>- In some cities like New York and San Francisco many establishments keep their beer menu's up-to-date here
 			<br>
 			<br>
 			<a href="http://www.ratebeer.com/" style="font-size: 22px; color: rgb(230,168,0); text-decoration: underline">ratebeer.com</a>
