@@ -44,12 +44,15 @@ homePage = '''
 			<h2>Search by Food:</h2>
 				<select>
 					<option>Choose A Food</option>
-					<option>Red Meat</option>
-					<option>Poulrty</option>
-					<option>Pasta</option>
-					<option>Dessert</option>
-					<option>Sausage</option>
 					<option>Spicy</option>
+					<option>Red Meat</option>
+					<option>Pasta</option>
+					<option>Sea Food</option>
+					<option>Salad</option>
+					<option>Chocolate</option>
+					<option>Baked Goods</option>
+					<option>Poulrty</option>
+					<option>Weiners</option>
 					
 				</select>
 

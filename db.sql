@@ -56,7 +56,7 @@ INSERT INTO `Food` (`Id`,`Name`) VALUES
 	(4,'Sea Food'),
 	(5,'Salad'),
 	(6,'Chocolate'),
-	(7,'Backed Good'),
+	(7,'Baked Goods'),
 	(8,'Poultry'),
 	(9,'Weiners');
 
