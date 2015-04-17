@@ -7,13 +7,13 @@ homePage = '''
 
 
 <!DOCTYPE html>
-<html>
-	<head>
-        <link rel="stylesheet" type="text/css" href="/styles.css">
-        <meta charset = "UTF-8">
-        <title>BeerMe</title>
-
-	</head>
+<html lang = "en">
+<head>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<meta charset = "UTF-8">
+	<title>BeerMe</title>
+	
+</head>
 <body>
 
 
@@ -62,7 +62,7 @@ homePage = '''
 			<br>
 			<br>- See the lists of various local establishments
 			<br>
-			<br>- Isn’t really updated everywhere, best coverage in cities like New York and San Fran
+			<br>- In some cities like New York and San Francisco many establishments keep their beer menu's up-to-date here
 			<br>
 			<br>
 			<a href="http://www.ratebeer.com/" style="font-size: 22px; color: rgb(230,168,0); text-decoration: underline">ratebeer.com</a>
