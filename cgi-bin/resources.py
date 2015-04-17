@@ -1,25 +1,34 @@
-<!DOCTYPE html>
-<head>
-        <link rel="stylesheet" href="styles.css">
-        <meta charset = "UTF-8">
-        <title>BeerMe</title>
+#!/usr/bin/python
 
+import urllib2
+
+
+homePage = '''
+
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<meta charset = "UTF-8">
+	<title>BeerMe</title>
+	
 </head>
 <body>
 
 
 	<table align ="center" width="800" cellspacing="0" cellpadding ="0" style="background-color: rgb(230,168,0); border-spacing: 0px">
 		<tr>
-			<td height="200" align="center"><a href="index.html"><img src="images/graphics-beer-249813.gif" alt="banner" width="780" height="200" border="0" /></td>
+			<td height="200" align="center"><a href="index.py"><img src="../images/graphics-beer-249813.gif" alt="banner" width="780" height="200" border="0" /></td>
 		</tr>
 	</table>
 	<table align ="center" border="0" width="800" cellspacing="0" cellpadding="0">
 		<tr valign="center" style="border-spacing: 0px;">
-			<td width="188" align="center"><div class ="nav" ><a href="index.html">Home</a></div></td>
-			<td width="188" align="center"><div class ="nav" ><a href="login.html">Login</a></div></td>
-			<td width="188" align="center"><div class ="nav" ><a href="beerinfo.html">Beer Info</a></div></td>
-			<td width="188" align="center"><div class ="nav" ><a href="resources.html">Other Resources</a></div></td>
-			<td width="188" align="center"><div class ="nav" ><a href="about.html">About Us</a></div></td>
+			<td width="188" align="center"><div class ="nav" ><a href="index.py">Home</a></div></td>
+			<td width="188" align="center"><div class ="nav" ><a href="login.py">Login</a></div></td>
+			<td width="188" align="center"><div class ="nav" ><a href="beerinfo.py">Beer Info</a></div></td>
+			<td width="188" align="center"><div class ="nav" ><a href="resources.py">Other Resources</a></div></td>
+			<td width="188" align="center"><div class ="nav" ><a href="about.py">About Us</a></div></td>
 		</tr>
 	</table>
         
@@ -44,7 +53,6 @@
 			<br>
 			<br>- Forums
 			
-			
 			<br>
 			<br>
 			<br>
@@ -54,16 +62,12 @@
 			<br>
 			<br>- See the lists of various local establishments
 			<br>
-			<br>- Isn’t really updated everywhere, best coverage in cities like New York and San Fran
-
-			
-			<br>
+			<br>- In some cities like New York and San Francisco many establishments keep their beer menu's up-to-date here
 			<br>
 			<br>
 			<a href="http://www.ratebeer.com/" style="font-size: 22px; color: rgb(230,168,0); text-decoration: underline">ratebeer.com</a>
 			<br>
 			<br>- Similar to beeradvocate
-
 
 			<br>
 			<br>
@@ -73,7 +77,6 @@
 			<br>- Mobile app
 			<br>
 			<br>- Rate and comment on the beer you drink, brag to friends
-
 
 			<br>
 			<br>
@@ -93,3 +96,6 @@
 		</table>
 	
 </body>
+</html>
+'''
+print homePage
