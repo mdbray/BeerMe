@@ -1,123 +1,164 @@
-## dbTests.py
-# Documentation for this module
-# 
-# this document is designed to use automated testing to confirm that our database preforms
-# as expected.
-# 
-# data base query example 
-# cursor.execute("SELECT * FROM Food")
-# 
-# example of how to print all the first cell of all the rows
-# for row in cursor.fetchall() :
-#     print row[0],row[1]
+## @package DBAutoTester
+#  This document is designed to use automated testing to confirm that our database preforms
+#  as expected.
 
-import unittest
-import MySQLdb
+import unittest;
+import MySQLdb;
 
-## a global variable
-database = MySQLdb.connect("localhost","user","","BeerMeDB" )
+## A global variable
+database = MySQLdb.connect("localhost","user","","BeerMeDB" );
 
+## A global variable
+cursor = database.cursor();
 
-## a global variable prepare cursor object for executing queries
-cursor = database.cursor()
+## Document class.
+#  @param unittest.TestCase The Test Case pointer.
+class Test_SQL_DB(unittest.TestCase):
 
-
-
-class TestSQLdb(unittest.TestCase):
-
-	def test_getNameUsingBeerID(self): 
-		
-		cursor.execute("SELECT Name FROM BeerCat WHERE BeerCat.Id=1") # query database for beer with ID 1
-		name = cursor.fetchone()[0] # get name associated with beer ID 1
-		self.assertEqual(name,"American Ale") # check to see if name is correct
-		
-		# same steps for checking name of beer ID 2
-		cursor.execute("SELECT Name FROM BeerCat WHERE BeerCat.Id=2")
-		name = cursor.fetchone()[0]
-		self.assertEqual(name,"American Lager")
+	## A method
+	#  @param self The object pointer
+	def TestTetNameUsingBeerID(self): 
 	
-	def test_getColorUsingColorID(self):
+		## A method variable
+		nameBeer1 = 0;
 		
-		cursor.execute("SELECT Name FROM Color WHERE Color.Id=1") # query database for color with ID 1
-		name = cursor.fetchone()[0] # get name associated with color ID 1
-		self.assertEqual(name,"Dark") # check to see if name is corrrect
+		## A method variable
+		nameBeer2 = 0;
 		
-		# repeat steps for color with ID 2, 3, 4, etc
-		cursor.execute("SELECT Name FROM Color WHERE Color.Id=2")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Brown")
+		cursor.execute("SELECT Name FROM BeerCat WHERE BeerCat.Id=1");
+		nameBeer1 = cursor.fetchone()[0];
+		self.assertEqual(nameBeer1,"American Ale");
+		cursor.execute("SELECT Name FROM BeerCat WHERE BeerCat.Id=2");
+		nameBeer2 = cursor.fetchone()[0];
+		self.assertEqual(nameBeer2,"American Lager");
 
-		cursor.execute("SELECT Name FROM Color WHERE Color.Id=3")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Amber")
-
-		cursor.execute("SELECT Name FROM Color WHERE Color.Id=4")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Pale")
-
-		cursor.execute("SELECT Name FROM Color WHERE Color.Id=5")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Light")
-
-	def test_getFoodUsingFoodID(self):
-
-		cursor.execute("SELECT Name FROM Food WHERE Food.Id=1")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Spicy")
-
-		cursor.execute("SELECT Name FROM Food WHERE Food.Id=2")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Red Meat")
-
-		cursor.execute("SELECT Name FROM Food WHERE Food.Id=3")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Pasta")
-
-		cursor.execute("SELECT Name FROM Food WHERE Food.Id=4")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Sea Food")
-
-		cursor.execute("SELECT Name FROM Food WHERE Food.Id=5")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Salad")
-
-		cursor.execute("SELECT Name FROM Food WHERE Food.Id=6")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Chocolate")
-
-		cursor.execute("SELECT Name FROM Food WHERE Food.Id=7")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Baked Good")
-
-		cursor.execute("SELECT Name FROM Food WHERE Food.Id=8")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Poultry")
-
-		cursor.execute("SELECT Name FROM Food WHERE Food.Id=9")
-                name = cursor.fetchone()[0]
-                self.assertEqual(name,"Weiners")
-
-	def test_getBeerNameUsingFoodId(self):
-
-		cursor.execute("SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId=2")
-                names = cursor.fetchall()
-                self.assertEqual(names[0][0],"Sierra Nevada")
-		self.assertEqual(names[1][0],"Upslope")
-
-		cursor.execute("SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId=5")
-                names = cursor.fetchall()
-                self.assertEqual(names[0][0],"Victory")
-
-
-		cursor.execute("SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId=3")
-                names = cursor.fetchall()
-                self.assertEqual(names[0][0],"Coors Light")
-
-	def test_getReviewUsingFoodIdAndBeer(self):
+	## A method
+	#  @param self The object pointer.
+	def TestGetColorUsingColorID(self):
 		
-		cursor.execute("SELECT Review FROM FoodPairing WHERE FoodId=2 AND Name='Sierra Nevada'")
-                review = cursor.fetchone()[0]
-                self.assertEqual(review,"A very crisp and refreshing beer, this easy-to-drink pale ale is an excellent compliment to a delicious burger.  The heavier, meaty flavor of the burger pairs extraordinarily well with light, fresh taste of the beer.  You'll have a hard time finding a better brew than this to wash down your bites of")
+		## A method variable
+		nameColor1 = 0;
+		
+		## A method variable
+		nameColor2 = 0;
+		
+		## A method variable
+		nameColor3 = 0;
+		
+		## A method variable
+		nameColor4 = 0;
+		
+		## A method variable
+		nameColor5 = 0;
+		
+		cursor.execute("SELECT Name FROM Color WHERE Color.Id=1");
+		nameColor1 = cursor.fetchone()[0];
+		self.assertEqual(nameColor1,"Dark");
+		cursor.execute("SELECT Name FROM Color WHERE Color.Id=2");		
+        nameColor2 = cursor.fetchone()[0];
+        self.assertEqual(nameColor2,"Brown");
+		cursor.execute("SELECT Name FROM Color WHERE Color.Id=3");		
+        nameColor3 = cursor.fetchone()[0];
+        self.assertEqual(nameColor3,"Amber");     
+		cursor.execute("SELECT Name FROM Color WHERE Color.Id=4");		
+        nameColor4 = cursor.fetchone()[0];
+        self.assertEqual(nameColor4,"Pale");
+		cursor.execute("SELECT Name FROM Color WHERE Color.Id=5");		
+        nameColor5 = cursor.fetchone()[0];
+        self.assertEqual(nameColor5,"Light");
+
+	## A method
+	#  @param self The object pointer.
+	def TestGetFoodUsingFoodID(self):
+
+		## A method variable
+		nameFood1 = 0;
+		
+		## A method variable
+		nameFood2 = 0;
+		
+		## A method variable
+		nameFood3 = 0;
+		
+		## A method variable
+		nameFood4 = 0;
+		
+		## A method variable
+		nameFood5 = 0;
+		
+		## A method variable
+		nameFood6 = 0;
+		
+		## A method variable
+		nameFood7 = 0;
+		
+		## A method variable
+		nameFood8 = 0;
+		
+		## A method variable
+		nameFood9 = 0;
+		
+		cursor.execute("SELECT Name FROM Food WHERE Food.Id=1");		
+        nameFood1 = cursor.fetchone()[0];
+        self.assertEqual(nameFood1,"Spicy");
+		cursor.execute("SELECT Name FROM Food WHERE Food.Id=2");
+        nameFood2 = cursor.fetchone()[0];
+        self.assertEqual(nameFood2,"Red Meat");
+		cursor.execute("SELECT Name FROM Food WHERE Food.Id=3");
+        nameFood3 = cursor.fetchone()[0];
+        self.assertEqual(nameFood3,"Pasta");
+		cursor.execute("SELECT Name FROM Food WHERE Food.Id=4");
+        nameFood4 = cursor.fetchone()[0];
+        self.assertEqual(nameFood4,"Sea Food");
+		cursor.execute("SELECT Name FROM Food WHERE Food.Id=5");
+        nameFood5 = cursor.fetchone()[0];
+        self.assertEqual(nameFood5,"Salad");
+		cursor.execute("SELECT Name FROM Food WHERE Food.Id=6");
+        nameFood6 = cursor.fetchone()[0];
+        self.assertEqual(nameFood6,"Chocolate");
+		cursor.execute("SELECT Name FROM Food WHERE Food.Id=7");
+        nameFood7 = cursor.fetchone()[0];
+        self.assertEqual(nameFood7,"Baked Good");
+		cursor.execute("SELECT Name FROM Food WHERE Food.Id=8");
+        nameFood8 = cursor.fetchone()[0];
+        self.assertEqual(nameFood8,"Poultry");
+		cursor.execute("SELECT Name FROM Food WHERE Food.Id=9");
+        nameFood9 = cursor.fetchone()[0];
+        self.assertEqual(nameFood9,"Weiners");
+        
+	## A method
+	#  @param self The object pointer.
+	def TestGetBeerNameUsingFoodId(self):
+	
+	   ## A method variable
+	   namesBeerBrandsByFood2 = 0;
+	   
+	   ## A method variable
+	   namesBeerBrandsByFood5 = 0;
+	   
+	   ## A method variable
+	   namesBeerBrandsByFood3 = 0;
+	
+		cursor.execute("SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId=2");
+        namesBeerBrandsByFood2 = cursor.fetchall();
+        self.assertEqual(names[0][0],"Sierra Nevada");
+		self.assertEqual(namesBeerBrandsByFood2[1][0],"Upslope");
+		cursor.execute("SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId=5");
+        namesBeerBrandsByFoods5 = cursor.fetchall();
+        self.assertEqual(namesBeerBrandsByFoods5[0][0],"Victory");
+		cursor.execute("SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId=3");
+        namesBeerBrandsByFoods3 = cursor.fetchall();
+        self.assertEqual(namesBeerBrandsByFoods3[0][0],"Coors Light");
+
+	## Doc for method
+	def TestGetReviewUsingFoodIdAndBeer(self):
+	
+	    ## A method variable
+	    reviewOfFood2SierraNevadaPairing = 0; 
+		
+		cursor.execute("SELECT Review FROM FoodPairing WHERE FoodId=2 AND Name='Sierra Nevada'");
+        reviewOfFood2SierraNevadaPairing = cursor.fetchone()[0];
+        self.assertEqual(reviewOfFood2SierraNevadaPairing,"A very crisp and refreshing beer, this easy-to-drink pale ale is an excellent compliment to a delicious burger.  The heavier, meaty flavor of the burger pairs extraordinarily well with light, fresh taste of the beer.  You'll have a hard time finding a better brew than this to wash down your bites of");
 
 if __name__ == '__main__':
-	unittest.main()
+	unittest.main();
