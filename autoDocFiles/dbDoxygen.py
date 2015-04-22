@@ -1,5 +1,6 @@
 
 ## This document is designed to use automated testing to confirm that our database preforms as expected.
+# It is our only code script, which is why we are using it for the autodoc assignment.
 
 import unittest;
 import MySQLdb;
@@ -11,14 +12,15 @@ database = MySQLdb.connect("localhost","user","","BeerMeDB" );
 ## A global variable
 cursor = database.cursor();
 
-##  \brief    Test class for testing database.
+## \brief    Test class for testing database.
 #  \details   This class tests that SELECT statements return desired results.
 #  \authors     Jacob C. Levine, Spencer Wilson, Matt Geckle
 #  @param unittest.TestCase The Test Case pointer.
 class Test_SQL_DB(unittest.TestCase):
 
-        ## \brief    Confirms that beer category ID's are linked to proper beer category names in BeerCat table. 
+    ## \brief    Confirms that beer category ID's are linked to proper beer category names in BeerCat table. 
 	#  \details    Test format: SELECT Name FROM BeerCat Where BeerCat.Id = <ID number>
+	#  \functionality	Returns false if a self.assert fails
 	#  @param self The object pointer
 	def TestGetNameUsingBeerID(self): 
 	
@@ -34,8 +36,10 @@ class Test_SQL_DB(unittest.TestCase):
 		cursor.execute("SELECT Name FROM BeerCat WHERE BeerCat.Id=2");
 		nameBeer2 = cursor.fetchone()[0];
 		self.assertEqual(nameBeer2,"American Lager");
-
-	## A method
+		
+	## \brief    Confirms that beer color ID's are linked to the proper beer color in Color table. 
+	#  \details    Test format: SELECT Name FROM Color Where Color.Id = <ID number>
+	#  \functionality	Returns false if a self.assert fails
 	#  @param self The object pointer.
 	def TestGetColorUsingColorID(self):
 		
@@ -70,7 +74,9 @@ class Test_SQL_DB(unittest.TestCase):
         nameColor5 = cursor.fetchone()[0];
         self.assertEqual(nameColor5,"Light");
 
-	## A method
+	## \brief    Confirms that food ID's are linked to proper food name in Food table. 
+	#  \details    Test format: SELECT Name FROM Food Where Food.Id = <ID number>
+	#  \functionality	Returns false if a self.assert fails
 	#  @param self The object pointer.
 	def TestGetFoodUsingFoodID(self):
 
@@ -129,7 +135,9 @@ class Test_SQL_DB(unittest.TestCase):
         nameFood9 = cursor.fetchone()[0];
         self.assertEqual(nameFood9,"Weiners");
         
-	## A method
+	## \brief    Confirms that food ID's are linked to proper beer matches in the FoodPairing table. 
+	#  \details    Test format: SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId = <ID number>
+	#  \functionality	Returns false if a self.assert fails
 	#  @param self The object pointer.
 	def TestGetBeerNameUsingFoodId(self):
 	
@@ -153,7 +161,10 @@ class Test_SQL_DB(unittest.TestCase):
         namesBeerBrandsByFoods3 = cursor.fetchall();
         self.assertEqual(namesBeerBrandsByFoods3[0][0],"Coors Light");
 
-	## Doc for method
+	## \brief    Confirms that the correct review is linked to proper FoodID and beer Name in the FoodPairing table.
+	#  \details    Test format: SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId = <ID number>
+	#  \functionality	Returns false if a self.assert fails
+	#  @param self The object pointer.
 	def TestGetReviewUsingFoodIdAndBeer(self):
 	
 	    ## A method variable

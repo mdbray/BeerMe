@@ -4,6 +4,7 @@
 # this document is designed to use automated testing to confirm that our database preforms
 # as expected.
 # 
+# It is our only code script, which is why we are using it for the autodoc assignment.
 # data base query example 
 # cursor.execute("SELECT * FROM Food")
 # 
@@ -22,12 +23,15 @@ database = MySQLdb.connect("localhost","user","","BeerMeDB" )
 cursor = database.cursor()
 
 
-##  \brief    Test class for testing database.
+## \brief    Test class for testing database.
 #  \details   This class tests that SELECT statements return desired results.
 #  \authors	Jacob C. Levine, Spencer Wilson, Matt Geckle
 class TestSQLdb(unittest.TestCase):
         
-        ##  \brief    Test format: SELECT Name FROM BeerCat Where BeerCat.Id=<IDnumber>
+ 	## \brief    Confirms that beer category ID's are linked to proper beer category names in BeerCat table. 
+	#  \details    Test format: SELECT Name FROM BeerCat Where BeerCat.Id = <ID number>
+	#  \functionality	Returns false if a self.assert fails
+	#  @param self The object pointer	
 	def test_getNameUsingBeerID(self): 
 		
 		cursor.execute("SELECT Name FROM BeerCat WHERE BeerCat.Id=1") # query database for beer with ID 1
@@ -38,7 +42,11 @@ class TestSQLdb(unittest.TestCase):
 		cursor.execute("SELECT Name FROM BeerCat WHERE BeerCat.Id=2")
 		name = cursor.fetchone()[0]
 		self.assertEqual(name,"American Lager")
-	
+		
+	## \brief    Confirms that beer color ID's are linked to the proper beer color in Color table. 
+	#  \details    Test format: SELECT Name FROM Color Where Color.Id = <ID number>
+	#  \functionality	Returns false if a self.assert fails
+	#  @param self The object pointer.
 	def test_getColorUsingColorID(self):
 		
 		cursor.execute("SELECT Name FROM Color WHERE Color.Id=1") # query database for color with ID 1
@@ -61,7 +69,10 @@ class TestSQLdb(unittest.TestCase):
 		cursor.execute("SELECT Name FROM Color WHERE Color.Id=5")
                 name = cursor.fetchone()[0]
                 self.assertEqual(name,"Light")
-
+	## \brief    Confirms that food ID's are linked to proper food name in Food table. 
+	#  \details    Test format: SELECT Name FROM Food Where Food.Id = <ID number>
+	#  \functionality	Returns false if a self.assert fails
+	#  @param self The object pointer.
 	def test_getFoodUsingFoodID(self):
 
 		cursor.execute("SELECT Name FROM Food WHERE Food.Id=1")
@@ -99,7 +110,11 @@ class TestSQLdb(unittest.TestCase):
 		cursor.execute("SELECT Name FROM Food WHERE Food.Id=9")
                 name = cursor.fetchone()[0]
                 self.assertEqual(name,"Weiners")
-
+                
+	## \brief    Confirms that food ID's are linked to proper beer matches in the FoodPairing table. 
+	#  \details    Test format: SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId = <ID number>
+	#  \functionality	Returns false if a self.assert fails
+	#  @param self The object pointer.
 	def test_getBeerNameUsingFoodId(self):
 
 		cursor.execute("SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId=2")
