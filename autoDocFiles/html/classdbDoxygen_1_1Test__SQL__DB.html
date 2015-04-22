@@ -110,17 +110,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae0d35ceea4631b889f44716107f4e52c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Confirms that beer category ID's are linked to proper beer category names in BeerCat table.  <a href="#ae0d35ceea4631b889f44716107f4e52c">More...</a><br/></td></tr>
 <tr class="separator:ae0d35ceea4631b889f44716107f4e52c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f25d58b2c8ab5d6c6536a5dc7214a01"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdbDoxygen_1_1Test__SQL__DB.html#a9f25d58b2c8ab5d6c6536a5dc7214a01">TestGetColorUsingColorID</a></td></tr>
-<tr class="memdesc:a9f25d58b2c8ab5d6c6536a5dc7214a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method.  <a href="#a9f25d58b2c8ab5d6c6536a5dc7214a01">More...</a><br/></td></tr>
+<tr class="memdesc:a9f25d58b2c8ab5d6c6536a5dc7214a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Confirms that beer color ID's are linked to the proper beer color in Color table.  <a href="#a9f25d58b2c8ab5d6c6536a5dc7214a01">More...</a><br/></td></tr>
 <tr class="separator:a9f25d58b2c8ab5d6c6536a5dc7214a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a727a9b3476f267325da6a3d3f7442dc8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdbDoxygen_1_1Test__SQL__DB.html#a727a9b3476f267325da6a3d3f7442dc8">TestGetFoodUsingFoodID</a></td></tr>
-<tr class="memdesc:a727a9b3476f267325da6a3d3f7442dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method.  <a href="#a727a9b3476f267325da6a3d3f7442dc8">More...</a><br/></td></tr>
+<tr class="memdesc:a727a9b3476f267325da6a3d3f7442dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Confirms that food ID's are linked to proper food name in Food table.  <a href="#a727a9b3476f267325da6a3d3f7442dc8">More...</a><br/></td></tr>
 <tr class="separator:a727a9b3476f267325da6a3d3f7442dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12f7edd9bde8e132987f8a095a419e9a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdbDoxygen_1_1Test__SQL__DB.html#a12f7edd9bde8e132987f8a095a419e9a">TestGetBeerNameUsingFoodId</a></td></tr>
-<tr class="memdesc:a12f7edd9bde8e132987f8a095a419e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method.  <a href="#a12f7edd9bde8e132987f8a095a419e9a">More...</a><br/></td></tr>
+<tr class="memdesc:a12f7edd9bde8e132987f8a095a419e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Confirms that food ID's are linked to proper beer matches in the FoodPairing table.  <a href="#a12f7edd9bde8e132987f8a095a419e9a">More...</a><br/></td></tr>
 <tr class="separator:a12f7edd9bde8e132987f8a095a419e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b50d1b2d1920798ec59b26a0c538a29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b50d1b2d1920798ec59b26a0c538a29"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdbDoxygen_1_1Test__SQL__DB.html#a0b50d1b2d1920798ec59b26a0c538a29">TestGetReviewUsingFoodIdAndBeer</a></td></tr>
-<tr class="memdesc:a0b50d1b2d1920798ec59b26a0c538a29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Doc for method. <br/></td></tr>
+<tr class="memitem:a0b50d1b2d1920798ec59b26a0c538a29"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdbDoxygen_1_1Test__SQL__DB.html#a0b50d1b2d1920798ec59b26a0c538a29">TestGetReviewUsingFoodIdAndBeer</a></td></tr>
+<tr class="memdesc:a0b50d1b2d1920798ec59b26a0c538a29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Confirms that the correct review is linked to proper FoodID and beer Name in the FoodPairing table.  <a href="#a0b50d1b2d1920798ec59b26a0c538a29">More...</a><br/></td></tr>
 <tr class="separator:a0b50d1b2d1920798ec59b26a0c538a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -148,7 +147,8 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
       </table>
 </div><div class="memdoc">
 
-<p>A method. </p>
+<p>Confirms that food ID's are linked to proper beer matches in the FoodPairing table. </p>
+<p>Test format: SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId = &lt;ID number&gt;=""&gt;  Returns false if a self.assert fails </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">self</td><td>The object pointer. </td></tr>
@@ -172,7 +172,8 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
       </table>
 </div><div class="memdoc">
 
-<p>A method. </p>
+<p>Confirms that beer color ID's are linked to the proper beer color in Color table. </p>
+<p>Test format: SELECT Name FROM Color Where Color.Id = &lt;ID number&gt;=""&gt;  Returns false if a self.assert fails </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">self</td><td>The object pointer. </td></tr>
@@ -196,7 +197,8 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
       </table>
 </div><div class="memdoc">
 
-<p>A method. </p>
+<p>Confirms that food ID's are linked to proper food name in Food table. </p>
+<p>Test format: SELECT Name FROM Food Where Food.Id = &lt;ID number&gt;=""&gt;  Returns false if a self.assert fails </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">self</td><td>The object pointer. </td></tr>
@@ -221,10 +223,35 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><div class="memdoc">
 
 <p>Confirms that beer category ID's are linked to proper beer category names in BeerCat table. </p>
-<p>Test format: SELECT Name FROM BeerCat Where BeerCat.Id=&lt;IDnumber&gt; </p>
+<p>Test format: SELECT Name FROM BeerCat Where BeerCat.Id = &lt;ID number&gt;=""&gt;  Returns false if a self.assert fails </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">self</td><td>The object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0b50d1b2d1920798ec59b26a0c538a29"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def dbDoxygen.Test_SQL_DB.TestGetReviewUsingFoodIdAndBeer </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Confirms that the correct review is linked to proper FoodID and beer Name in the FoodPairing table. </p>
+<p>Test format: SELECT Name FROM FoodPairing WHERE FoodPairing.FoodId = &lt;ID number&gt;=""&gt;  Returns false if a self.assert fails </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>The object pointer. </td></tr>
   </table>
   </dd>
 </dl>
@@ -237,7 +264,7 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 20 2015 15:30:06 for BeerMe by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 22 2015 13:03:35 for BeerMe by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

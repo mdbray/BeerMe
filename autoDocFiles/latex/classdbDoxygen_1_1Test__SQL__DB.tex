@@ -18,14 +18,13 @@ Inheritance diagram for db\-Doxygen.\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B\-:\begin{f
 def \hyperlink{classdbDoxygen_1_1Test__SQL__DB_ae0d35ceea4631b889f44716107f4e52c}{Test\-Get\-Name\-Using\-Beer\-I\-D}
 \begin{DoxyCompactList}\small\item\em Confirms that beer category I\-D's are linked to proper beer category names in Beer\-Cat table. \end{DoxyCompactList}\item 
 def \hyperlink{classdbDoxygen_1_1Test__SQL__DB_a9f25d58b2c8ab5d6c6536a5dc7214a01}{Test\-Get\-Color\-Using\-Color\-I\-D}
-\begin{DoxyCompactList}\small\item\em A method. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Confirms that beer color I\-D's are linked to the proper beer color in Color table. \end{DoxyCompactList}\item 
 def \hyperlink{classdbDoxygen_1_1Test__SQL__DB_a727a9b3476f267325da6a3d3f7442dc8}{Test\-Get\-Food\-Using\-Food\-I\-D}
-\begin{DoxyCompactList}\small\item\em A method. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Confirms that food I\-D's are linked to proper food name in Food table. \end{DoxyCompactList}\item 
 def \hyperlink{classdbDoxygen_1_1Test__SQL__DB_a12f7edd9bde8e132987f8a095a419e9a}{Test\-Get\-Beer\-Name\-Using\-Food\-Id}
-\begin{DoxyCompactList}\small\item\em A method. \end{DoxyCompactList}\item 
-\hypertarget{classdbDoxygen_1_1Test__SQL__DB_a0b50d1b2d1920798ec59b26a0c538a29}{def \hyperlink{classdbDoxygen_1_1Test__SQL__DB_a0b50d1b2d1920798ec59b26a0c538a29}{Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer}}\label{classdbDoxygen_1_1Test__SQL__DB_a0b50d1b2d1920798ec59b26a0c538a29}
-
-\begin{DoxyCompactList}\small\item\em Doc for method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Confirms that food I\-D's are linked to proper beer matches in the Food\-Pairing table. \end{DoxyCompactList}\item 
+def \hyperlink{classdbDoxygen_1_1Test__SQL__DB_a0b50d1b2d1920798ec59b26a0c538a29}{Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer}
+\begin{DoxyCompactList}\small\item\em Confirms that the correct review is linked to proper Food\-I\-D and beer Name in the Food\-Pairing table. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -51,9 +50,9 @@ Jacob C. Levine, Spencer Wilson, Matt Geckle
 )}}\label{classdbDoxygen_1_1Test__SQL__DB_a12f7edd9bde8e132987f8a095a419e9a}
 
 
-A method. 
+Confirms that food I\-D's are linked to proper beer matches in the Food\-Pairing table. 
 
-
+Test format\-: S\-E\-L\-E\-C\-T Name F\-R\-O\-M Food\-Pairing W\-H\-E\-R\-E Food\-Pairing.\-Food\-Id = $<$\-I\-D number$>$=\char`\"{}\char`\"{}$>$  Returns false if a self.\-assert fails 
 \begin{DoxyParams}{Parameters}
 {\em self} & The object pointer. \\
 \hline
@@ -67,9 +66,9 @@ A method.
 )}}\label{classdbDoxygen_1_1Test__SQL__DB_a9f25d58b2c8ab5d6c6536a5dc7214a01}
 
 
-A method. 
+Confirms that beer color I\-D's are linked to the proper beer color in Color table. 
 
-
+Test format\-: S\-E\-L\-E\-C\-T Name F\-R\-O\-M Color Where Color.\-Id = $<$\-I\-D number$>$=\char`\"{}\char`\"{}$>$  Returns false if a self.\-assert fails 
 \begin{DoxyParams}{Parameters}
 {\em self} & The object pointer. \\
 \hline
@@ -83,9 +82,9 @@ A method.
 )}}\label{classdbDoxygen_1_1Test__SQL__DB_a727a9b3476f267325da6a3d3f7442dc8}
 
 
-A method. 
+Confirms that food I\-D's are linked to proper food name in Food table. 
 
-
+Test format\-: S\-E\-L\-E\-C\-T Name F\-R\-O\-M Food Where Food.\-Id = $<$\-I\-D number$>$=\char`\"{}\char`\"{}$>$  Returns false if a self.\-assert fails 
 \begin{DoxyParams}{Parameters}
 {\em self} & The object pointer. \\
 \hline
@@ -101,9 +100,25 @@ A method.
 
 Confirms that beer category I\-D's are linked to proper beer category names in Beer\-Cat table. 
 
-Test format\-: S\-E\-L\-E\-C\-T Name F\-R\-O\-M Beer\-Cat Where Beer\-Cat.\-Id=$<$\-I\-Dnumber$>$ 
+Test format\-: S\-E\-L\-E\-C\-T Name F\-R\-O\-M Beer\-Cat Where Beer\-Cat.\-Id = $<$\-I\-D number$>$=\char`\"{}\char`\"{}$>$  Returns false if a self.\-assert fails 
 \begin{DoxyParams}{Parameters}
 {\em self} & The object pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{classdbDoxygen_1_1Test__SQL__DB_a0b50d1b2d1920798ec59b26a0c538a29}{\index{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B@{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}!Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer@{Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer}}
+\index{Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer@{Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer}!dbDoxygen::Test_SQL_DB@{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}}
+\subsubsection[{Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer}]{\setlength{\rightskip}{0pt plus 5cm}def db\-Doxygen.\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B.\-Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classdbDoxygen_1_1Test__SQL__DB_a0b50d1b2d1920798ec59b26a0c538a29}
+
+
+Confirms that the correct review is linked to proper Food\-I\-D and beer Name in the Food\-Pairing table. 
+
+Test format\-: S\-E\-L\-E\-C\-T Name F\-R\-O\-M Food\-Pairing W\-H\-E\-R\-E Food\-Pairing.\-Food\-Id = $<$\-I\-D number$>$=\char`\"{}\char`\"{}$>$  Returns false if a self.\-assert fails 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
 \hline
 \end{DoxyParams}
 
