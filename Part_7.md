@@ -6,11 +6,11 @@
 Those 21 years of age and over will have access to a straightforward application that gives an instant and personal recommendation for what type of beer would best fit his/her given situation, based on his/her input
 
 ###Who:
--Michelle Bray
--Jon Allured
--Spencer Wilson
--Jacob Levine
--Matthew Geckel
+- Michelle Bray
+- Jon Allured
+- Spencer Wilson
+- Jacob Levine
+- Matthew Geckel
 
 ###Auto-Documenter: 
 Doxygen
