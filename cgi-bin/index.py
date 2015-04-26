@@ -42,7 +42,7 @@ homePage = '''
 		<table align="center">
 			<td style="width: 400px; padding: 25px; background-color: rgb(225,225,225); border: 2px solid black; text-align: center; vertical-align: center;">
 			<h2>Search by Food:</h2>
-				<select>
+				<select name="select_food" id="select_food">
 					<option>Choose A Food</option>
 					<option>Spicy</option>
 					<option>Red Meat</option>
