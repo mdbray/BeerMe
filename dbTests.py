@@ -20,7 +20,6 @@ cursor = database.cursor()
 """
 # data base query example 
 cursor.execute("SELECT * FROM Food")
-
 # example of how to print all the first cell of all the rows
 for row in cursor.fetchall() :
     print row[0],row[1]
@@ -123,4 +122,3 @@ class TestSQLdb(unittest.TestCase):
                 self.assertEqual(review,"A very crisp and refreshing beer, this easy-to-drink pale ale is an excellent compliment to a delicious burger.  The heavier, meaty flavor of the burger pairs extraordinarily well with light, fresh taste of the beer.  You will have a hard time finding a better brew than this to wash down your bites of juicy burger!")
 
 if __name__ == '__main__':
-	unittest.main()
