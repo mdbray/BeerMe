@@ -2,10 +2,7 @@
 
 import urllib2
 
-
 homePage = '''
-
-
 
 <!DOCTYPE html>
 <html>
@@ -41,7 +38,7 @@ homePage = '''
 
 		<table align="center">
 			<td style="width: 400px; padding: 25px; background-color: rgb(225,225,225); border: 2px solid black; text-align: center; vertical-align: center;">
-			<h2>Search by Food:</h2>
+			<h2>I'm Eating:</h2>
 				<select name="select_food" id="select_food">
 					<option>Choose A Food</option>
 					<option>Spicy</option>
@@ -56,32 +53,22 @@ homePage = '''
 					
 				</select>
 
-
-
 		</table>
 		<br>
+		
+		
 		<table align="center">
-						<td style="width: 400px; padding: 25px; background-color: rgb(225,225,225); border: 2px solid black; text-align: center; vertical-align: center;">
-						<strong style="font-size: 25px; color: rgb(230,168,0)">Search by Color:</strong>
-						<br>
-						<p style="font-size: 22px">
-						<br>
-						Dark
-						<br>
-						<br>
-						Brown
-						<br>
-						<br>
-						Amber
-						<br>
-						<br>
-						Pale
-						<br>
-						<br>
-						Light
-						<br>
-						<br>
-						</p>
+			<td style="width: 400px; padding: 25px; background-color: rgb(225,225,225); border: 2px solid black; text-align: center; vertical-align: center;">
+			<h2>I'm Feeling:</h2>
+				<select name="select_color" id="select_color">
+					<option>Choosea Color</option>
+					<option>Dark</option>
+					<option>Brown</option>
+					<option>Amber</option>
+					<option>Pale</option>
+					<option>Light</option>
+					
+				</select>
 		</table>
 	
 	</td>
