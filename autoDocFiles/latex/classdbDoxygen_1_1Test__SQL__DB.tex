@@ -1,0 +1,128 @@
+\hypertarget{classdbDoxygen_1_1Test__SQL__DB}{\section{db\-Doxygen.\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B Class Reference}
+\label{classdbDoxygen_1_1Test__SQL__DB}\index{db\-Doxygen.\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B@{db\-Doxygen.\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}}
+}
+
+
+Test class for testing database.  
+
+
+Inheritance diagram for db\-Doxygen.\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdbDoxygen_1_1Test__SQL__DB}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classdbDoxygen_1_1Test__SQL__DB_ae0d35ceea4631b889f44716107f4e52c}{Test\-Get\-Name\-Using\-Beer\-I\-D}
+\begin{DoxyCompactList}\small\item\em Confirms that beer category I\-D's are linked to proper beer category names in Beer\-Cat table. \end{DoxyCompactList}\item 
+def \hyperlink{classdbDoxygen_1_1Test__SQL__DB_a9f25d58b2c8ab5d6c6536a5dc7214a01}{Test\-Get\-Color\-Using\-Color\-I\-D}
+\begin{DoxyCompactList}\small\item\em Confirms that beer color I\-D's are linked to the proper beer color in Color table. \end{DoxyCompactList}\item 
+def \hyperlink{classdbDoxygen_1_1Test__SQL__DB_a727a9b3476f267325da6a3d3f7442dc8}{Test\-Get\-Food\-Using\-Food\-I\-D}
+\begin{DoxyCompactList}\small\item\em Confirms that food I\-D's are linked to proper food name in Food table. \end{DoxyCompactList}\item 
+def \hyperlink{classdbDoxygen_1_1Test__SQL__DB_a12f7edd9bde8e132987f8a095a419e9a}{Test\-Get\-Beer\-Name\-Using\-Food\-Id}
+\begin{DoxyCompactList}\small\item\em Confirms that food I\-D's are linked to proper beer matches in the Food\-Pairing table. \end{DoxyCompactList}\item 
+def \hyperlink{classdbDoxygen_1_1Test__SQL__DB_a0b50d1b2d1920798ec59b26a0c538a29}{Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer}
+\begin{DoxyCompactList}\small\item\em Confirms that the correct review is linked to proper Food\-I\-D and beer Name in the Food\-Pairing table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test class for testing database. 
+
+This class tests that S\-E\-L\-E\-C\-T statements return desired results. \begin{DoxyAuthor}{Authors}
+Jacob C. Levine, Spencer Wilson, Matt Geckle 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em unittest.\-Test\-Case} & The Test Case pointer. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classdbDoxygen_1_1Test__SQL__DB_a12f7edd9bde8e132987f8a095a419e9a}{\index{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B@{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}!Test\-Get\-Beer\-Name\-Using\-Food\-Id@{Test\-Get\-Beer\-Name\-Using\-Food\-Id}}
+\index{Test\-Get\-Beer\-Name\-Using\-Food\-Id@{Test\-Get\-Beer\-Name\-Using\-Food\-Id}!dbDoxygen::Test_SQL_DB@{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}}
+\subsubsection[{Test\-Get\-Beer\-Name\-Using\-Food\-Id}]{\setlength{\rightskip}{0pt plus 5cm}def db\-Doxygen.\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B.\-Test\-Get\-Beer\-Name\-Using\-Food\-Id (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classdbDoxygen_1_1Test__SQL__DB_a12f7edd9bde8e132987f8a095a419e9a}
+
+
+Confirms that food I\-D's are linked to proper beer matches in the Food\-Pairing table. 
+
+Test format\-: S\-E\-L\-E\-C\-T Name F\-R\-O\-M Food\-Pairing W\-H\-E\-R\-E Food\-Pairing.\-Food\-Id = $<$\-I\-D number$>$=\char`\"{}\char`\"{}$>$  Returns false if a self.\-assert fails 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classdbDoxygen_1_1Test__SQL__DB_a9f25d58b2c8ab5d6c6536a5dc7214a01}{\index{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B@{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}!Test\-Get\-Color\-Using\-Color\-I\-D@{Test\-Get\-Color\-Using\-Color\-I\-D}}
+\index{Test\-Get\-Color\-Using\-Color\-I\-D@{Test\-Get\-Color\-Using\-Color\-I\-D}!dbDoxygen::Test_SQL_DB@{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}}
+\subsubsection[{Test\-Get\-Color\-Using\-Color\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}def db\-Doxygen.\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B.\-Test\-Get\-Color\-Using\-Color\-I\-D (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classdbDoxygen_1_1Test__SQL__DB_a9f25d58b2c8ab5d6c6536a5dc7214a01}
+
+
+Confirms that beer color I\-D's are linked to the proper beer color in Color table. 
+
+Test format\-: S\-E\-L\-E\-C\-T Name F\-R\-O\-M Color Where Color.\-Id = $<$\-I\-D number$>$=\char`\"{}\char`\"{}$>$  Returns false if a self.\-assert fails 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classdbDoxygen_1_1Test__SQL__DB_a727a9b3476f267325da6a3d3f7442dc8}{\index{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B@{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}!Test\-Get\-Food\-Using\-Food\-I\-D@{Test\-Get\-Food\-Using\-Food\-I\-D}}
+\index{Test\-Get\-Food\-Using\-Food\-I\-D@{Test\-Get\-Food\-Using\-Food\-I\-D}!dbDoxygen::Test_SQL_DB@{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}}
+\subsubsection[{Test\-Get\-Food\-Using\-Food\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}def db\-Doxygen.\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B.\-Test\-Get\-Food\-Using\-Food\-I\-D (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classdbDoxygen_1_1Test__SQL__DB_a727a9b3476f267325da6a3d3f7442dc8}
+
+
+Confirms that food I\-D's are linked to proper food name in Food table. 
+
+Test format\-: S\-E\-L\-E\-C\-T Name F\-R\-O\-M Food Where Food.\-Id = $<$\-I\-D number$>$=\char`\"{}\char`\"{}$>$  Returns false if a self.\-assert fails 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classdbDoxygen_1_1Test__SQL__DB_ae0d35ceea4631b889f44716107f4e52c}{\index{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B@{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}!Test\-Get\-Name\-Using\-Beer\-I\-D@{Test\-Get\-Name\-Using\-Beer\-I\-D}}
+\index{Test\-Get\-Name\-Using\-Beer\-I\-D@{Test\-Get\-Name\-Using\-Beer\-I\-D}!dbDoxygen::Test_SQL_DB@{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}}
+\subsubsection[{Test\-Get\-Name\-Using\-Beer\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}def db\-Doxygen.\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B.\-Test\-Get\-Name\-Using\-Beer\-I\-D (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classdbDoxygen_1_1Test__SQL__DB_ae0d35ceea4631b889f44716107f4e52c}
+
+
+Confirms that beer category I\-D's are linked to proper beer category names in Beer\-Cat table. 
+
+Test format\-: S\-E\-L\-E\-C\-T Name F\-R\-O\-M Beer\-Cat Where Beer\-Cat.\-Id = $<$\-I\-D number$>$=\char`\"{}\char`\"{}$>$  Returns false if a self.\-assert fails 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{classdbDoxygen_1_1Test__SQL__DB_a0b50d1b2d1920798ec59b26a0c538a29}{\index{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B@{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}!Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer@{Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer}}
+\index{Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer@{Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer}!dbDoxygen::Test_SQL_DB@{db\-Doxygen\-::\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B}}
+\subsubsection[{Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer}]{\setlength{\rightskip}{0pt plus 5cm}def db\-Doxygen.\-Test\-\_\-\-S\-Q\-L\-\_\-\-D\-B.\-Test\-Get\-Review\-Using\-Food\-Id\-And\-Beer (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classdbDoxygen_1_1Test__SQL__DB_a0b50d1b2d1920798ec59b26a0c538a29}
+
+
+Confirms that the correct review is linked to proper Food\-I\-D and beer Name in the Food\-Pairing table. 
+
+Test format\-: S\-E\-L\-E\-C\-T Name F\-R\-O\-M Food\-Pairing W\-H\-E\-R\-E Food\-Pairing.\-Food\-Id = $<$\-I\-D number$>$=\char`\"{}\char`\"{}$>$  Returns false if a self.\-assert fails 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+db\-Doxygen.\-py\end{DoxyCompactItemize}
