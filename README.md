@@ -1,23 +1,26 @@
-This is the README file for BeerMe :shipit:
+#This is the README file for BeerMe :shipit:
 
-Title: BeerMe
+###Title: BeerMe
 
-Vision: For those 21 years of age and older...
+###Vision: 
+Those 21 years of age and over will have access to a straightforward application that gives an instant and personal recommendation for what type of beer(s) would best fit his/her given situation, based on his/her input.
 
-Who:
+###Who:
 - Michelle Bray
 - Jon Allured
 - Spencer Wilson
 - Jacob Levine
 - Matthew Geckel
 
-Rep Organization:
+###Repo Organization:
 - cgi-bin (where the .py web pages are)
-- Images folder
-- Project Assignments folder (parts 1-7 in markdown format)
-- autoDocfiles folder (with Doxygen test outputs)
+- images folder
+- database folder
+- Assignments folder (parts 1-7 in markdown format)
+- autoDocFiles folder (with Doxygen test outputs)
+- html folder (backup of web pages as .html)
 
-How to Build/Run:
+###How to Build/Run:
 - must run our webpage on a local server
 - python -m CGIHTTPServer 8000 (to run server)
 - go to localhost:8000/cgi-bin/verifyage.py 
