@@ -15,6 +15,7 @@ Rep Organization:
 - cgi-bin (where the .py web pages are)
 - Images folder
 - Project Assignments folder (parts 1-7 in markdown format)
+- autoDocfiles folder (with Doxygen test outputs)
 
 How to Build/Run:
 - must run our webpage on a local server
