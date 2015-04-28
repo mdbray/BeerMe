@@ -27,4 +27,7 @@ Those 21 years of age and over will have access to a straightforward application
 - verifyage.py (in the cgi-bin) is the initial homepage, to be run locally
 - this should take you to index.py once you verify your age so that you can access full functionality of the site
 
+###Deployed Version (with Heroku):
+https://salty-journey-5265.herokuapp.com/verifyage.php
+
 
